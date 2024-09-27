@@ -55,7 +55,7 @@ Feel free to explore the website! You can navigate through the different section
 If you have any questions, comments, or would like to collaborate, feel free to reach out to me!
 
 - **Email**: jaysuratwala18@gmail.com
-- **LinkedIn**: [linkedin.com/in/jaysuratwala]([https://www.linkedin.com/in/jaysuratwala](https://www.linkedin.com/in/jay-suratwala-526527208/))
+- **LinkedIn**: [https://www.linkedin.com/in/jay-suratwala-526527208/](https://www.linkedin.com/in/jay-suratwala-526527208/)
 - **GitHub**: [github.com/jaysuratwala](https://github.com/jaysuratwala)
 
 Thank you for visiting my portfolio!
