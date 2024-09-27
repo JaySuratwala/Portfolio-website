@@ -345,6 +345,11 @@ footer {
 }
 
 @media (max-width: 600px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
     .rightside {
         display: none;
         flex-direction: column;
@@ -416,6 +421,7 @@ footer {
         width: 80%;
         font-size: 1.5rem;
         margin-bottom: 20px;
+        border: 0;
     }
 
     .project {
@@ -467,6 +473,11 @@ footer {
 }
 
 @media (min-width: 600px) and (max-width: 1024px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
     nav {
         flex-direction: row;
         justify-content: space-between;
