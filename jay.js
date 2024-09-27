@@ -8,10 +8,13 @@ for (i = 0; i < p.length; i++) {
     break;
   }
 }
-// Toggle the burger menu
-document.getElementById("menu-icon").addEventListener("click", function() {
-  const navList = document.getElementById("nav-list");
-  navList.classList.toggle("show");
+//hamburger menu
+const menuIcon = document.getElementById('menu-icon');
+const navList = document.getElementById('nav-list');
+
+menuIcon.addEventListener('click', () => {
+    menuIcon.classList.toggle('active');
+    navList.classList.toggle('active');
 });
 
 // Add smooth scrolling to the nav links
