@@ -4,12 +4,18 @@
     box-sizing: border-box;
 }
 
+html,
+body {
+    width: 100%;
+    overflow-x: hidden;
+    /* Prevent horizontal scrolling */
+}
+
 body {
     font-family: 'Encode Sans', sans-serif;
     background-color: black;
     color: white;
     scroll-behavior: smooth;
-    /* Enables smooth scrolling */
 }
 
 a {
@@ -75,16 +81,7 @@ nav li a.active {
     border: none;
     margin-top: 25px;
     cursor: pointer;
-    /* Added for better UX */
 }
-
-/* section {
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    border-bottom: 2px solid #ec204d;
-    /* text-align: center; */
 
 .info {
     display: flex;
@@ -92,7 +89,6 @@ nav li a.active {
     margin: 60px 0;
     align-items: center;
     height: 100vh;
-    color: white;
 }
 
 .info>div {
@@ -104,9 +100,15 @@ nav li a.active {
     font-size: 3rem;
 }
 
+.left>span {
+    font-size: 3.5rem;
+}
+
 .right img {
-    width: 115%;
+    width: 100%;
+    /* Adjusted width to prevent overflow */
     border-radius: 10%;
+    max-width: 100vw;
 }
 
 .violet {
@@ -158,7 +160,6 @@ hr {
     margin: 30px 20px;
     margin-right: 200px;
     text-align: left;
-    /* Changed to left for clarity */
     font-weight: 300;
 }
 
@@ -173,12 +174,15 @@ hr {
 
 .services {
     background-color: black;
-    /* display: flex; */
     flex-direction: column;
     height: 100vh;
     align-items: normal;
     padding: 60px 0;
     text-align: center;
+}
+
+.center {
+    margin: 40px 0;
 }
 
 .cards {
@@ -191,8 +195,8 @@ hr {
 
 .logs {
     box-shadow: rgba(6, 24, 44, 0.4) 0 0 0 2px,
-    rgba(6, 24, 44, 0.65) 0 4px 6px -1px,
-    rgba(255, 255, 255, 0.08) 0 1px 0 inset;
+        rgba(6, 24, 44, 0.65) 0 4px 6px -1px,
+        rgba(255, 255, 255, 0.08) 0 1px 0 inset;
 }
 
 .card-container {
@@ -202,14 +206,13 @@ hr {
 }
 
 .card {
-    background-image: linear-gradient(to bottom,#d94c6ae0, #ec204d);
+    background-image: linear-gradient(to bottom, #d94c6ae0, #ec204d);
     border-radius: 10px;
-    /* padding: 20px; */
     margin: 20px;
     width: 300px;
     box-shadow: #ec204c96 0 0 0 2px,
-    rgba(6, 24, 44, 0.65) 0 4px 6px -1px,
-    rgba(255, 255, 255, 0.08) 0 1px 0 inset;
+        rgba(6, 24, 44, 0.65) 0 4px 6px -1px,
+        rgba(255, 255, 255, 0.08) 0 1px 0 inset;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -239,7 +242,6 @@ h3 {
 
 .icon-row {
     display: flex;
-    /* Ensured flex for consistency */
     justify-content: space-around;
     margin-top: 10px;
 }
@@ -249,7 +251,6 @@ h3 {
     filter: brightness(0.9);
 }
 
-/* Default Web Scroller Styles */
 ::-webkit-scrollbar {
     width: 5px;
     border-radius: 10px;
@@ -263,7 +264,6 @@ h3 {
     background: none;
 }
 
-/* Contact Me Section */
 .contact-me {
     padding: 50px 20px;
     display: flex;
@@ -309,18 +309,6 @@ form {
     outline: none;
 }
 
-input[type="number"] {
-    -moz-appearance: textfield;
-    -webkit-appearance: none;
-    appearance: none;
-}
-
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
 .contact-me input::placeholder,
 .contact-me textarea::placeholder {
     color: #222;
@@ -342,7 +330,7 @@ input[type="number"]::-webkit-inner-spin-button {
     transition: background-color 0.3s ease;
 }
 
-.contact-me button:hover {
+.contact-me button {
     background-color: #444;
 }
 
@@ -356,100 +344,25 @@ footer {
     background-color: #222;
 }
 
-/* Responsive Styles */
-@media (max-width: 1200px) {
-    .leftside {
-        padding-right: 100px;
-        /* Adjust padding for smaller screens */
-    }
-
-    .info {
-        flex-direction: column;
-        /* Stack items vertically */
-    }
-
-    .info>div {
-        width: 100%;
-        /* Full width for small screens */
-        margin-bottom: 20px;
-        /* Spacing between stacked elements */
-    }
-
-    .left {
-        font-size: 2.5rem;
-        /* Adjust font size */
-    }
-}
-
-@media (max-width: 992px) {
-    nav {
-        flex-direction: column;
-        /* Stack nav items vertically */
-        height: auto;
-        /* Allow height to adjust */
-    }
-
-    nav ul {
-        flex-direction: column;
-        /* Vertical layout */
-        margin: 10px 0;
-        /* Space around */
-    }
-
-    nav ul li {
-        margin: 10px 0;
-        /* Space between nav items */
-    }
-
-    .leftside {
-        padding-right: 50px;
-        /* Further reduce padding */
-        font-size: 1.5rem;
-        /* Adjust font size */
-    }
-
-    .content {
-        flex-direction: column;
-        /* Stack content vertically */
-    }
-
-    .content>div {
-        margin: 20px 10px;
-        /* Adjust margins for smaller screens */
-    }
-
-    .project {
-        flex-direction: column;
-        /* Stack project items vertically */
-        align-items: center;
-        /* Center items */
-    }
-
-    .card {
-        width: 90%;
-        /* Full width for cards on small screens */
-        margin: 10px 0;
-        /* Adjust margins */
-    }
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     .rightside {
         display: none;
-        /* Initially hide the menu */
+        flex-direction: column;
         position: absolute;
         top: 70px;
         right: 0;
-        width: 100%;
         background-color: black;
-        text-align: center;
-        transition: max-height 0.3s ease;
+        width: 100vw;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s ease-in-out;
     }
 
     .rightside ul {
         flex-direction: column;
-        padding: 0;
+        align-items: center;
+        list-style: none;
     }
 
     .rightside ul li {
@@ -458,38 +371,145 @@ footer {
 
     .menu-icon {
         display: block;
+        cursor: pointer;
     }
 
-    .rightside.show {
+    .menu-icon span {
+        height: 3px;
+        width: 30px;
+        background-color: white;
+        margin: 5px;
+        transition: all 0.3s ease;
+    }
+
+    .menu-icon.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-icon.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-icon.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    .rightside.active {
         display: flex;
-        /* Show the menu on toggle */
+    }
+
+    .info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .right {
+        order: -1;
+    }
+
+    .right img {
+        width: 80%;
+    }
+
+    .left {
+        width: 80%;
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    .project {
         flex-direction: column;
     }
-}
 
-@media (max-width: 768px) {
-    .head {
-        font-size: 2rem;
-        /* Adjust font size */
+    .img {
+        display: none;
     }
 
-    .element {
-        font-size: 2.5rem;
-        /* Adjust font size */
+    hr {
+        display: none;
     }
 
-    .contact-me {
-        padding: 30px 10px;
-        /* Adjust padding */
+    .content {
+        margin: 20px;
     }
 
-    .contact-me h2 {
-        font-size: 2rem;
-        /* Adjust font size */
+    .content p {
+        margin-right: 0;
+        font-size: 0.9rem;
+    }
+
+    .services {
+        margin-bottom: 80px;
+    }
+
+    .center {
+        margin: 10px 0;
+    }
+
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+        margin: 10px 0;
     }
 
     .contact-container {
-        padding: 30px;
-        /* Adjust padding */
+        width: 90%;
+    }
+
+    form {
+        padding: 20px;
     }
 }
+
+@media (min-width: 600px) and (max-width: 1024px) {
+    nav {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    nav ul {
+        justify-content: flex-end;
+    }
+    
+    .info {
+        flex-direction: row;
+    }
+    
+    .info > .left {
+        width: 50%;
+    }
+    
+    .info > .right img {
+        width: 100%;
+    }
+    
+    .project {
+        flex-direction: row;
+    }
+    
+    .img {
+        margin: 40px 0;
+    }
+    
+    .card-container {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    
+    .card {
+        width: 45%;
+        margin: 10px 0;
+    }
+    
+    .contact-container {
+        width: 80%;
+    }
+    
+    form {
+        padding: 30px;
+    }
+}    
