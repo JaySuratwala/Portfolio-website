@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://jaysuratwala.github.io/sitemap.xml
